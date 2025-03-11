@@ -40,6 +40,8 @@ const getPropertyById = async (req, res) => {
 
 const getFilteredProperties = async (req, res) => {
   try {
+    console.log("reaching")
+    console.log(req.query)
     const {
       bhk,
       residential,
@@ -48,11 +50,13 @@ const getFilteredProperties = async (req, res) => {
       genderPreference,
       houseType,
       city,
-      locality,
       area,
+      locality,
       page = 1,
       limit = 9,
     } = req.query;
+
+    console.log(locality)
 
     const filter = {};
 
